@@ -66,7 +66,7 @@ if sconta==1:
     #E-mail
     nav.find_element_by_xpath('/html/body/div[1]/div/div[1]/div[1]/div[2]/form/div[1]/div[2]/input').send_keys('wellingtongama2010@hotmail.com')
     #Senha
-    nav.find_element_by_xpath('/html/body/div[1]/div/div[1]/div[1]/div[2]/form/div[2]/div[2]/div/div/input').send_keys('462857391w')
+    nav.find_element_by_xpath('/html/body/div[1]/div/div[1]/div[1]/div[2]/form/div[2]/div[2]/div/div/input').send_keys('######')
     #Submit
     nav.find_element_by_xpath('/html/body/div[1]/div/div[1]/div[1]/div[2]/form/button').click()
     sleep(5)
