@@ -13,3 +13,10 @@ print()
 print()
 #print("CONTENT")
 #print(response.content)
+
+#OU
+
+from urllib.request import urlopen
+
+html = urlopen('https://google.com')
+print(html.read())
