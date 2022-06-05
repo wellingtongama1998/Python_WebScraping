@@ -26,6 +26,7 @@ else:
 
 #ATTRIBUTE ERROR
 #Tentar acessar uma tag que não existe devolverá objeto none,e resultará no lançamento de um AttributeError.
+#Criamos uma função getTittle que devolve o título da pagina,ou um objeto None caso tenha havido algum problema para obtê-lo
 
 from urllib.request import urlopen
 from urllib.error import HTTPError
