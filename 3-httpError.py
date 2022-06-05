@@ -27,3 +27,27 @@ else:
 #ATTRIBUTE ERROR
 #Tentar acessar uma tag que não existe devolverá objeto none,e resultará no lançamento de um AttributeError.
 
+from urllib.request import urlopen
+from urllib.error import HTTPError
+from urllib.error import URLError
+from webbrowser import get
+from bs4 import BeautifulSoup
+
+def getTittle(url):
+    try:
+        html=urlopen(url)
+    except HTTPError as e:
+        return None
+    try:
+        bs = BeautifulSoup(html.read(), 'html.parser')
+        tittle =bs.body.h1
+    except AttributeError as e:
+        return None
+    return tittle
+
+
+tittle= getTittle('http://www.google.com')
+if tittle == None:
+    print("Title não encontrada")
+else:
+    print(tittle)
