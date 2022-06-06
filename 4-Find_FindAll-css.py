@@ -24,3 +24,11 @@ for name in namelist:
 #É muito mais fácil encontrar o que você procura em um objeto BeautifulSoup do que em um bloco de texto.
 #Chamar .get_text() deve ser sempre a sua última tarefa,imediatamente antes de exibir,armazenar ou manipular os dados finais.
 #Em geral,você deve se esforçar ao máximo para tentar preservar a estrutura de tags de um documento.
+
+#FIND() FINDALL()
+#Duas funções do BeautifulSoup que provavelmente serão mais usadas.
+#find_all(tag, attributes, recursive, text, limit, keywords)
+#find(tag, attributes, recursive, text, keywords)
+#É bem provavel que,em 95% do tempo,somente os dois primeiros argumwentos serão necessarios: tag e attributes.
+#TAG
+#ex: .find_all(['h1','h2','h3','h4','h5','h6']) nome de uma tag como string,ou até mesmo uma lista python de nomes de tags definidos como strings.
