@@ -30,5 +30,13 @@ for name in namelist:
 #find_all(tag, attributes, recursive, text, limit, keywords)
 #find(tag, attributes, recursive, text, keywords)
 #É bem provavel que,em 95% do tempo,somente os dois primeiros argumwentos serão necessarios: tag e attributes.
+
 #TAG
-#ex: .find_all(['h1','h2','h3','h4','h5','h6']) nome de uma tag como string,ou até mesmo uma lista python de nomes de tags definidos como strings.
+# nome de uma tag como string,ou até mesmo uma lista python de nomes de tags definidos como strings.
+#ex: .find_all(['h1','h2','h3','h4','h5','h6'])
+
+#ATTRIBUTES
+#Aceita um dicionario python de atributos e faz a correspondência com tags que contenham qualquer um desses atributos.
+#ex: .find_all('span',{'class':{'green','red'}})
+
+#TEXT
