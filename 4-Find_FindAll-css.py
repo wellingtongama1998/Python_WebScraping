@@ -69,7 +69,17 @@ for name in namelist:
 #Se tivermos uma lista de tags longa,poderemos acabar com muita informação indesejada.
 #O argumento KEYWORD permite acrescentar um filtro 'e'.
 
-#
+###########################################################################################################
+
+#OBJETOS BEAUTIFULSOUP
+
+#OBJETOS "TAG"
+#Obtidos na forma de listas - ou individualmente - por meio da chamada 
+#a FIND e FIND_ALL em um objeto BEAUTIFULSOUP,ou descendo níveis.assim:
+# bs.div.h1
+
+#OBJETOS "NAVIGABLESTRING"
+#Usados para representar texto em tags,em vez das próprias tags(algumas funções atuam em NavigableString e o geram, em vez de usar objetos tag).
          
 
 
