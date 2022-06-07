@@ -71,15 +71,20 @@ for name in namelist:
 
 ###########################################################################################################
 
-#OBJETOS BEAUTIFULSOUP
+#1-OBJETOS BEAUTIFULSOUP
 
-#OBJETOS "TAG"
+#2-OBJETOS "TAG"
 #Obtidos na forma de listas - ou individualmente - por meio da chamada 
 #a FIND e FIND_ALL em um objeto BEAUTIFULSOUP,ou descendo níveis.assim:
 # bs.div.h1
 
-#OBJETOS "NAVIGABLESTRING"
+#3-OBJETOS "NAVIGABLESTRING"
 #Usados para representar texto em tags,em vez das próprias tags(algumas funções atuam em NavigableString e o geram, em vez de usar objetos tag).
          
+#4-Objeto COMMENT
+#Usado para encontrar comentários HTML em tags de comentário ,
+#<!- como este -->
 
+#Eses quatro objetos são os únicos que você verá na biblioteca BeautifulSoup
+#(atualmente).
 
