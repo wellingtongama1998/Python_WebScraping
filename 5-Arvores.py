@@ -15,4 +15,4 @@ for child in bs.find('table', {'id': 'giftList'}).descendants:
 #.CHILDREN
 #Se quiser encontrar somente os descendentes que sejam filhos
 #.DESCENDANTS
-#Se fôssemos escrevê-lo no lugar de children(),aproximadamente duas dúzias de 
+#Se fôssemos escrevê-lo no lugar de children(),aproximadamente duas dúzias de tags.
