@@ -31,7 +31,22 @@ for child in bs.find('table', {'id': 'giftList'}).descendants:
  
           #next_subling() e previous_sibling().
            #Devolvem uma única tag,em vez de devolver uma lista delas.
+  
           
+          
+#Pais
+#.parents() e .parent()
+
+#É provável que precisará encontrar pais de tags com menos frequência do que
+#terá que encontrar seus filhos e irmãos.
+#Em geral começamos com tags de nível mais alto e,em seguida,descobrimos como
+#descer para outros níveis até alcançar a porção exata de dados que queremos.
+
+#1- A tag imagem com src':'../img/gifts/img1.jpg é inicialmente selecionada.
+#2- Selecionamos o pai dessa tag(nesse caso,é a tag TD)
+#3- Selecionamos a previous_sibling da tag TD(nesse caso é a tag TD que contém o
+# valor do produto em dólar.)
+#4- selecionamos o texto nessa tag: "R$15,00".
           
 from urllib.request import urlopen
 from bs4 import BeautifulSoup
@@ -43,3 +58,11 @@ for child in bs.find('table', {'id': 'giftList'}).tr.next_siblings:
     print(child)
 
           
+from urllib.request import urlopen
+from bs4 import BeautifulSoup
+
+html = urlopen('http://www.pythonscraping.com/pages/page3.html')
+bs = BeautifulSoup(html.read(), 'html.parser')
+print(bs.find('img',{'src':'../img/gifts/img1.jpg'}).parent.previous_sibling.get_text())
+
+
