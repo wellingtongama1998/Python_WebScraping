@@ -23,7 +23,7 @@ for child in bs.find('table', {'id': 'giftList'}).descendants:
           #Esse código tem como saída todas as linhas de produtos da tabela,exceto a primeira linha 
           #com os títulos.
           #(next) próximos irmãos.
-          #Solução: for child in bs.find('table', {'id': 'giftList'}).tr:
+          #Solução: bs.find('table', {'id': 'giftList'}).tr
 
 #previous_siblings().
           #Muitas vezes pode ser útil se houver uma tag facilmente selecionável no final de uma lista de tags
