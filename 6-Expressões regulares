@@ -1,0 +1,3 @@
+As expressões regulares recebem esse nome porque são usadas para identificar strings regulares;
+Elas podem seguramente afirmar o seguinte: "Sim,esta string que você me deu segue as regras e será devolvida"
+ou ""
