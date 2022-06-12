@@ -17,8 +17,7 @@ bs = BeautifulSoup(html , 'html.parser')
 images =bs.find_all('img',{'src':re.compile('\.\.\/img\/gifts/img.*\.jpg')})
 for image in images:
     print(image['src'])
-
-#Listando todas as images
+    #Listando todas as images
 
 #ACESSANDO ATRIBUTOS
 #Isso será particulamente útil com TAGS como a,em que o URL para o qual
