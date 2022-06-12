@@ -5,7 +5,6 @@ ou "Esta string não segue as regras e será descartada".
 
 Esse recurso pode ser excepcionalmente conveniente para analisar documentos grandes em busca de strings que sejam
 números de telefone ou endereços de e-mail,de foma rápida.
-
 O BeautifulSoup e as expressões regulares andam de mãos dadas quando se trata de coletar dados na web.
 
 from urllib.request import urlopen
@@ -19,8 +18,33 @@ for image in images:
     print(image['src'])
     #Listando todas as images
 
+
+
+
 #ACESSANDO ATRIBUTOS
 #Isso será particulamente útil com TAGS como a,em que o URL para o qual
 #elas apontam está contido no atributo HREF,e tag IMG no atributo SRC.
 # URL = HREF mytag.attrs
 # IMG = SRC  myImgTag.attrs['src']
+
+from urllib.request import urlopen
+from bs4 import BeautifulSoup
+import re
+
+html= urlopen('http://en.wikipedia.org/wiki/Kevin_Bacon')
+bs = BeautifulSoup(html , 'html.parser')
+for link in bs.find('div',{'id':'bodyContent'}).find_all('a',href=re.compile('^(/wiki/)((?!:).)*$')):
+    if 'href' in link.attrs:
+        print(link.attrs['href'])
+
+
+#A lista de links gerada,percebemos que todos os artigos esperados estão presente.
+#No entando há alguns indesejados também.
+#Os links que nos interessam todos tem três características em comum:
+#1-Estão na DIV com o ID definido com BODYCONTENT.
+#2-Os URLs não contêm dois-pontos.
+#3-Os URLs começam com /wiki/.
+
+#Essas regras podem ser usadas para uma pequena revisão no código a fim de obter somente
+#os links desejados para o artigo,usando a expressão regular: '^(/wiki/)((?!:).)*$'):
+#algoritmo Mersenne Twister
