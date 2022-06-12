@@ -16,7 +16,7 @@ html= urlopen('http://www.pythonscraping.com/pages/page3.html')
 bs = BeautifulSoup(html , 'html.parser')
 images =bs.find_all('img',{'src':re.compile('\.\.\/img\/gifts/img.*\.jpg')})
 for image in images:
-    print(image.attrs['src'])
+    print(image['src'])
 
 #Listando todas as images
 
