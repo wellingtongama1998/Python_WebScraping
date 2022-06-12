@@ -1,3 +1,27 @@
 As expressões regulares recebem esse nome porque são usadas para identificar strings regulares;
+
 Elas podem seguramente afirmar o seguinte: "Sim,esta string que você me deu segue as regras e será devolvida"
-ou ""
+ou "Esta string não segue as regras e será descartada".
+
+Esse recurso pode ser excepcionalmente conveniente para analisar documentos grandes em busca de strings que sejam
+números de telefone ou endereços de e-mail,de foma rápida.
+
+O BeautifulSoup e as expressões regulares andam de mãos dadas quando se trata de coletar dados na web.
+
+from urllib.request import urlopen
+from bs4 import BeautifulSoup
+import re
+
+html= urlopen('http://www.pythonscraping.com/pages/page3.html')
+bs = BeautifulSoup(html , 'html.parser')
+images =bs.find_all('img',{'src':re.compile('\.\.\/img\/gifts/img.*\.jpg')})
+for image in images:
+    print(image.attrs['src'])
+
+#Listando todas as images
+
+#ACESSANDO ATRIBUTOS
+#Isso será particulamente útil com TAGS como a,em que o URL para o qual
+#elas apontam está contido no atributo HREF,e tag IMG no atributo SRC.
+# URL = HREF mytag.attrs
+# IMG = SRC  myImgTag.attrs['src']
